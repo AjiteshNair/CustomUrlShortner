@@ -10,7 +10,7 @@ shortner.post('/post',async (req,res)=>{
     let {longUrl} = req.body,
         {shortUrl} = req.body;
     
-    const baseUrl = "http://localhost:3000"
+    //shortUrl = "http://localhost:3000/"+shortUrl;
 
     
 
@@ -31,6 +31,24 @@ shortner.post('/post',async (req,res)=>{
 
     }
 })
+
+shortner.get("/:customUrl",async(req,res)=>{
+    let customUrl = req.params.customUrl;
+    console.log(customUrl)
+    let newlink = await custom.findOne({"shortUrl":customUrl});
+    console.log("aaaaaaaaaaaaaaaaaaaaa",newlink.longUrl,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    res.redirect(newlink.longUrl);
+})
+
+
+// shortUrlRoute.get("/:shorturl", async (req,res)=>{
+//     console.log(" WORKING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+//     let shorturl = req.params.shorturl;                                         //read params, all req and res usage
+//     let newurl = await Url.findOne({ "urlCode": shorturl });
+//     console.log(newurl,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+//     res.redirect(newurl.longUrl)
+// })
+
 
 export default shortner;
 

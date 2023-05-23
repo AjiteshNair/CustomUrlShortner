@@ -5,7 +5,16 @@ import bodyparser from "body-parser";
 //import shortid from "shortid"
 const app = express();
 
-//console.log(shortid.generate())
+app.set('view engine','ejs');
+app.use(express.urlencoded({extended:false}))
+
+app.get('/',(req,res)=>{
+        res.render('layout')
+})
+
+// app.post('/short', async(req,res)=>{
+//         await
+// })
 
 import dotenv from 'dotenv';
 //import shortid from "shortid";

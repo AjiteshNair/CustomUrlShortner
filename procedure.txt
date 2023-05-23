@@ -6,6 +6,7 @@ call api from main
 in api, seach the db with the schema template
 if found, return , else create
 
+use get to redirect to the link 
 
 
 
