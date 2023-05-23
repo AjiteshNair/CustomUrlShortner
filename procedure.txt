@@ -1,0 +1,13 @@
+create server
+add mongodb connection in main file
+create mongodb schema
+export that schema to the main fileor api
+call api from main
+in api, seach the db with the schema template
+if found, return , else create
+
+
+
+
+
+//OSI MODEL

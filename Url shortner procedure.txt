@@ -1,0 +1,30 @@
+STEP 1 CREATE A SERVER
+Commands:
+	npm init -y
+	npm i express
+	npm i nodemon
+
+      the command initializes npm on the curent directory,
+      installs express
+      installs nodemon , allowing sever to be reset after every save
+
+ADD "type" : "module" in packages .json to use ES6
+ADD "start" : "nodemon index .js"
+
+Create a file named "index.js"
+
+Code:	
+	import express from "express"
+	const app = express();
+	port=3000;
+	app.listen(port,()=>{
+	       console.log(`server listening on port ${port}`);
+	})
+
+"npm start"
+
+====================================================================================================================================
+
+//prototypal inheritance
+
+STEP 2 
